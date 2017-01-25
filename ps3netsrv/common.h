@@ -10,7 +10,8 @@
 #define DPRINTF(...)
 #endif
 
-#ifdef __BIG_ENDIAN__
+/* Test for a big-endian machine */
+#if __BYTE_ORDER__ == __ORDER__BIG_ENDIAN__
 
 static inline uint16_t BE16(uint16_t x)
 {

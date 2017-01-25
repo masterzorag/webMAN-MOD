@@ -1553,8 +1553,8 @@ int main(int argc, char *argv[])
 #ifndef WIN32
 	if(sizeof(off_t) < 8)
 	{
-		DPRINTF("off_t too small!\n");
-		return -1;
+		DPRINTF("off_t too small! (%lu)\n", sizeof(off_t));
+		//return -1;
 	}
 #endif
 
